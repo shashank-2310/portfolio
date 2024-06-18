@@ -10,8 +10,8 @@ const links = [
 
 const NavLinks = () => {
     return (
-        <nav className="bg-black flex-col flex-center rounded-full">
-            <ul className='flex-between gap-4 lg:gap-8 text-white p-2'>
+        <nav className="bg-transparent flex-col flex-center rounded-full">
+            <ul className='flex-between gap-3 lg:gap-8 text-white py-2 px-1 lg:px-2'>
                 {links.map((link) => (
                     <li key={link.name}>
                         <Link href={link.href} className='hover:text-blue-400'>{link.name}</Link>
