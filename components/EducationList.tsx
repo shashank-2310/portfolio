@@ -8,7 +8,7 @@ export default function EducationList() {
             title: "Graduation",
             value: "graduation",
             content: (
-                <div className="w-3/4 overflow-hidden relative h-full rounded-2xl p-3 sm:p-6 text-white bg-gradient-to-b from-red-500 to-black">
+                <div className="w-4/5 sm:w-3/4 overflow-hidden relative h-full rounded-2xl p-3 sm:p-6 text-white bg-gradient-to-b from-red-500 to-black">
                     <h1 className="text-lg md:text-2xl font-semibold">Chandigarh Univeristy</h1>
                     <p className="text-sm md:text-base">Bachelor of Engineering</p>
                     <p className="text-sm md:text-base">Computer Science & Engineering</p>
@@ -20,7 +20,7 @@ export default function EducationList() {
             title: "Intermediate",
             value: "intermediate",
             content: (
-                <div className="w-3/4 overflow-hidden relative h-full rounded-2xl p-3 sm:p-6 text-white bg-gradient-to-b from-[#00C9A7] to-black">
+                <div className="w-4/5 sm:w-3/4 overflow-hidden relative h-full rounded-2xl p-3 sm:p-6 text-white bg-gradient-to-b from-[#00C9A7] to-black">
                     <h1 className="text-lg md:text-2xl font-semibold">Campus School</h1>
                     <p className="text-sm md:text-base">CBSE</p>
                     <p className="text-sm md:text-base">Non-Medical</p>
@@ -32,7 +32,7 @@ export default function EducationList() {
             title: "High School",
             value: "highschool",
             content: (
-                <div className="w-3/4 overflow-hidden relative h-full rounded-2xl p-3 sm:p-6 text-white bg-gradient-to-b from-[#1E86FF] to-black">
+                <div className="w-4/5 sm:w-3/4 overflow-hidden relative h-full rounded-2xl p-3 sm:p-6 text-white bg-gradient-to-b from-[#1E86FF] to-black">
                     <h1 className="text-lg md:text-2xl font-semibold">Campus School</h1>
                     <p className="text-sm md:text-base">CBSE</p>
                     <p className="text-sm md:text-base">High School</p>
@@ -43,7 +43,7 @@ export default function EducationList() {
     ];
 
     return (
-        <div className="h-[15rem] [perspective:1000px] rounded-xl relative flex flex-col w-full items-start justify-start lg:pl-10">
+        <div className="h-[21rem] sm:h-[14rem] lg:h-[15rem] [perspective:1000px] rounded-xl relative flex flex-col w-full items-start justify-start lg:pl-10">
             <h1 className="md:text-xl sm:pr-2 text-center sm:text-start text-base w-full text-gray-400 uppercase font-medium mb-3">Education</h1>
             <Tabs tabs={tabs} tabClassName="hover:bg-zinc-800 sm:mr-8"/>
         </div>
