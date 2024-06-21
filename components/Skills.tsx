@@ -8,6 +8,11 @@ type ScreenSize = {
     height: number;
 }
 
+type OrbitProps = {
+    icon: JSX.Element;
+    delay: number;
+}
+
 function useScreenSize(): ScreenSize {
     const [screenSize, setScreenSize] = useState<ScreenSize>({
         width: 0,
@@ -27,156 +32,6 @@ function useScreenSize(): ScreenSize {
     },
         []);
     return screenSize;
-}
-
-
-export default function Skills() {
-
-    const { width } = useScreenSize();
-    const isMobileInner = width < 500 ? 65 : 80;
-    const isMobileOuter = width < 500 ? 120 : 190;
-
-    return (
-        <div className="relative flex h-[350px] sm:h-[500px] w-full max-w-[32rem] items-center justify-center overflow-hidden md:shadow-xl ">
-            <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-6xl sm:text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10">
-                Skills
-            </span>
-
-            {/* Inner Circles */}
-            <OrbitingCircles
-                className="size-6 sm:size-8 border-none bg-transparent"
-                duration={20}
-                delay={6}
-                radius={isMobileInner}
-            >
-                <Icons.typescript />
-            </OrbitingCircles>
-            <OrbitingCircles
-                className="size-6 sm:size-8 border-none bg-transparent"
-                duration={20}
-                delay={10}
-                radius={isMobileInner}
-            >
-                <Icons.nextjs />
-            </OrbitingCircles>
-            <OrbitingCircles
-                className="size-6 sm:size-8 border-none bg-transparent"
-                duration={20}
-                delay={14}
-                radius={isMobileInner}
-            >
-                <Icons.git />
-            </OrbitingCircles>
-            <OrbitingCircles
-                className="size-6 sm:size-8 border-none bg-transparent"
-                duration={20}
-                delay={18}
-                radius={isMobileInner}
-            >
-                <Icons.tailwind />
-            </OrbitingCircles>
-            <OrbitingCircles
-                className="size-6 sm:size-8 border-none bg-transparent"
-                duration={20}
-                delay={22}
-                radius={isMobileInner}
-            >
-                <Icons.node />
-            </OrbitingCircles>
-
-            {/* Outer Circles (reverse) */}
-            <OrbitingCircles
-                className="size-9 sm:size-12 border-none bg-transparent"
-                radius={isMobileOuter}
-                duration={20}
-                delay={4}
-                reverse
-            >
-                <Icons.cpp />
-            </OrbitingCircles>
-            <OrbitingCircles
-                className="size-9 sm:size-12 border-none bg-transparent"
-                radius={isMobileOuter}
-                duration={20}
-                delay={6}
-                reverse
-            >
-                <Icons.gitHub />
-            </OrbitingCircles>
-            <OrbitingCircles
-                className="size-8 sm:size-12 border-none bg-transparent"
-                radius={isMobileOuter}
-                duration={20}
-                delay={8}
-                reverse
-            >
-                <Icons.javascript />
-            </OrbitingCircles>
-            <OrbitingCircles
-                className="size-9 sm:size-12 border-none bg-transparent"
-                radius={isMobileOuter}
-                duration={20}
-                delay={10}
-                reverse
-            >
-                <Icons.reactjs />
-            </OrbitingCircles>
-            <OrbitingCircles
-                className="size-9 sm:size-10 border-none bg-transparent p-1"
-                radius={isMobileOuter}
-                duration={20}
-                delay={12}
-                reverse
-            >
-                <Icons.vercel />
-            </OrbitingCircles>
-            <OrbitingCircles
-                className="size-9 sm:size-12 border-none bg-transparent"
-                radius={isMobileOuter}
-                duration={20}
-                delay={14}
-                reverse
-            >
-                <Icons.mongodb />
-            </OrbitingCircles>
-            <OrbitingCircles
-                className="size-9 sm:size-12 border-none bg-transparent"
-                radius={isMobileOuter}
-                duration={20}
-                delay={16}
-                reverse
-            >
-                <Icons.vscode />
-            </OrbitingCircles>
-            <OrbitingCircles
-                className="size-9 sm:size-12 border-none bg-transparent"
-                radius={isMobileOuter}
-                duration={20}
-                delay={18}
-                reverse
-            >
-                <Icons.html />
-            </OrbitingCircles>
-            <OrbitingCircles
-                className="size-9 sm:size-12 border-none bg-transparent"
-                radius={isMobileOuter}
-                duration={20}
-                delay={20}
-                reverse
-            >
-                <Icons.css />
-            </OrbitingCircles>
-            <OrbitingCircles
-                className="size-9 sm:size-12 border-none bg-transparent"
-                radius={isMobileOuter}
-                duration={20}
-                delay={22}
-                reverse
-            >
-                <Icons.c />
-            </OrbitingCircles>
-        </div>
-    );
 }
 
 const Icons = {
@@ -287,3 +142,67 @@ const Icons = {
         </svg>
     ),
 };
+
+
+const innerOrbit: OrbitProps[] = [
+    { icon: <Icons.typescript />, delay: 6 },
+    { icon: <Icons.nextjs />, delay: 10 },
+    { icon: <Icons.git />, delay: 14 },
+    { icon: <Icons.tailwind />, delay: 18 },
+    { icon: <Icons.node />, delay: 22 },
+];
+const outerOrbit: OrbitProps[] = [
+    { icon: <Icons.cpp />, delay: 4 },
+    { icon: <Icons.gitHub />, delay: 6 },
+    { icon: <Icons.javascript />, delay: 8 },
+    { icon: <Icons.reactjs />, delay: 10 },
+    { icon: <Icons.vercel />, delay: 12 },
+    { icon: <Icons.mongodb />, delay: 14 },
+    { icon: <Icons.vscode />, delay: 16 },
+    { icon: <Icons.html />, delay: 18 },
+    { icon: <Icons.css />, delay: 20 },
+    { icon: <Icons.c />, delay: 22 },
+];
+
+
+export default function Skills() {
+
+    const { width } = useScreenSize();
+    const isMobileInner = width < 500 ? 65 : 80;
+    const isMobileOuter = width < 500 ? 120 : 190;
+
+    return (
+        <div className="relative flex h-[350px] sm:h-[500px] w-full max-w-[32rem] items-center justify-center overflow-hidden md:shadow-xl ">
+            <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-6xl sm:text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10">
+                Skills
+            </span>
+
+            {/* Inner Circles */}
+            {innerOrbit.map((skill) => (
+                <OrbitingCircles
+                    key={skill.delay}
+                    className="size-6 sm:size-8 border-none bg-transparent"
+                    duration={20}
+                    delay={skill.delay}
+                    radius={isMobileInner}
+                >
+                    {skill.icon}
+                </OrbitingCircles>
+            ))}
+            {/* 
+            {/* Outer Circles (reverse) */}
+            {outerOrbit.map((skill) => (
+                <OrbitingCircles
+                    key={skill.delay}
+                    className="size-9 sm:size-12 border-none bg-transparent"
+                    radius={isMobileOuter}
+                    duration={20}
+                    delay={skill.delay}
+                    reverse
+                >
+                    {skill.icon}
+                </OrbitingCircles>
+            ))}
+        </div>
+    );
+}
