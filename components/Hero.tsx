@@ -30,14 +30,14 @@ const iconSlugs = [
 const Hero = () => {
     const words = ['Shashank Gupta', 'a Web Developer'];
     return (
-        <div className='sm:flex-row h-full flex-col flex justify-evenly items-center text-center sm:text-left w-full overflow-hidden'>
-            <div className="text-white flex flex-col justify-center w-full items-center sm:items-start sm:justify-start gap-4 lg:gap-6 h-full">
+        <div className='sm:flex-row h-full flex-col flex justify-around items-center text-center sm:text-left w-full overflow-hidden'>
+            <div className="text-white flex flex-col justify-center items-center sm:items-start sm:justify-start gap-4 lg:gap-6 h-full">
                 <h1 className='lg:text-5xl w-full flex-col flex text-2xl lg:gap-2 font-medium'>
                     <span className='flex flex-col sm:flex-row'>
                         Hello, I&apos;m&nbsp;
                         <WordRotate words={words} />
                     </span>
-                    , from India
+                    from India
                 </h1>
                 <p className='lg:text-lg text-base w-full sm:w-3/4'>
                     I&apos;m an aspiring software engineer with an interest in <span className='font-medium'>Frontend Frameworks.</span>

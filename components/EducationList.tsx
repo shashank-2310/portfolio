@@ -44,8 +44,8 @@ export default function EducationList() {
 
     return (
         <div className="h-[21rem] sm:h-[14rem] lg:h-[15rem] [perspective:1000px] rounded-xl relative flex flex-col w-full items-start justify-start lg:pl-10">
-            <h1 className="md:text-xl sm:pr-2 text-center sm:text-start text-base w-full text-gray-400 uppercase font-medium mb-3">Education</h1>
-            <Tabs tabs={tabs} tabClassName="hover:bg-zinc-800 sm:mr-8"/>
+            <h1 className="md:text-xl sm:pr-2 text-center sm:text-start sm:pl-[4.3rem] lg:pl-0 text-base w-full text-gray-400 uppercase font-medium mb-6">Education</h1>
+            <Tabs tabs={tabs} tabClassName="hover:bg-zinc-800 sm:mr-6"/>
         </div>
     );
 }

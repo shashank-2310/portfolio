@@ -1,11 +1,12 @@
 import React from 'react'
 import EducationList from './EducationList'
+import Skills from './Skills'
 
 const About = () => {
     return (
         <section className='size-full bg-black text-gray-300 flex flex-col gap-8 lg:gap-12 my-8' id='about'>
             <h1 className="text-4xl text-center uppercase">About Me</h1>
-            <div className="flex justify-center items-center lg:items-start flex-col-reverse lg:flex-row gap-12 w-full">
+            <div className="flex-center lg:items-start flex-col-reverse lg:flex-row gap-12 w-full">
                 <EducationList />
                 <div className="flex flex-col w-4/5">
                     <h2 className='md:text-xl text-base text-center sm:text-left w-full text-gray-400 font-medium mb-3 uppercase'>who am i?</h2>
@@ -21,6 +22,10 @@ const About = () => {
                         </p>
                     </div>
                 </div>
+            </div>
+            <div className="size-full flex-center flex-col mt-20 sm:mt-24 lg:mt-4 sm:gap-4">
+                <h1 className='uppercase text-xl text-gray-300'>My Skills</h1>
+                <Skills />
             </div>
         </section>
     )
