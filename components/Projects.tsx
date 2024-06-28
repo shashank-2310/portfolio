@@ -1,44 +1,7 @@
 import React from 'react'
+import { projects } from '@/data/projects.json'
 import ProjectCard from './ui/projectCard'
 
-const projects = [
-    {
-        name: 'NamasteUI',
-        shortdescription: 'An innovative UI library',
-        description: 'A sleek component library built on Next.js, Tailwind CSS, and TypeScript. Elevate your web projects with responsive navbar, grid, carousel, etc. more designed for seamless integration and enhanced user experiences.',
-        image: '/soon.jpg',
-        skills: ['Next.js', 'Tailwind CSS', 'TypeScript'],
-        github: 'https://github.com/shashank-2310/namasteui',
-        live: 'https://github.com/shashank-2310/namasteui',
-    },
-    {
-        name: 'Evently',
-        shortdescription: 'an event management platform',
-        description: 'Evently is a robust event management platform featuring secure event management with CRUD operations, related event connections, dynamic categorization, Stripe payments, and streamlined order management.',
-        image: '/evently.png',
-        skills: ['Next.js', 'Tailwind CSS', 'TypeScript', 'MongoDB', 'Stripe', 'Clerk Auth'],
-        github: 'https://github.com/shashank-2310/eventify',
-        live: 'https://eventify-inky.vercel.app/',
-    },
-    {
-        name: 'Portfolio',
-        shortdescription: 'Innovative projects portfolio showcase',
-        description: 'Crafted using components from Magic UI, leveraging the power of Next.js, Tailwind CSS, and other innovative technologies.',
-        image: '/portfolio.png',
-        skills: ['Next.js', 'Tailwind CSS', 'TypeScript', 'MagicUI', 'AceternityUI', 'NextUI'],
-        github: 'https://github.com/shashank-2310/portfolio',
-        live: 'https://shashankgupta-portfolio.vercel.app/',
-    },
-    {
-        name: 'Deluxe Dhaba',
-        shortdescription: 'an indian restaurant landing page',
-        description: 'Discover Deluxe Dhaba: Where timeless Indian flavors blend seamlessly with contemporary dining, crafted with care in every dish. Experience authentic tastes and warm hospitality in every visit.',
-        image: '/dhaba.png',
-        skills: ['Next.js', 'Tailwind CSS', 'TypeScript'],
-        github: 'https://github.com/shashank-2310/Deluxe-Dhaba/',
-        live: 'https://deluxe-dhaba.vercel.app/',
-    },
-];
 
 const Projects = () => {
     return (
