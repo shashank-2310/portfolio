@@ -1,10 +1,10 @@
 import React from 'react'
-import Link from 'next/link'
 import ShineBorder from './ui/shine-border'
 import { MdKeyboardArrowRight } from 'react-icons/md'
 import SocialIcons from './SocialIcons'
 import WordRotate from './ui/word-rotate'
 import IconCloud from './ui/icon-cloud'
+import ScrollLink from './ScrollLink'
 
 const iconSlugs = [
     "typescript",
@@ -30,7 +30,7 @@ const iconSlugs = [
 const Hero = () => {
     const words = ['Shashank Gupta', 'a Web Developer'];
     return (
-        <div className='sm:flex-row h-full flex-col flex justify-around items-center text-center sm:text-left w-full overflow-hidden'>
+        <section id='hero' className='sm:flex-row h-full flex-col flex justify-around items-center text-center sm:text-left w-full overflow-hidden'>
             <div className="text-white flex flex-col justify-center items-center sm:items-start sm:justify-start gap-4 lg:gap-6 h-full">
                 <h1 className='lg:text-5xl w-full flex-col flex text-2xl lg:gap-2 font-medium'>
                     <span className='flex flex-col sm:flex-row'>
@@ -47,14 +47,14 @@ const Hero = () => {
                         className="text-center rounded-full px-4 py-3 hover:bg-gradient-to-bl from-[#A07CFE] via-[#FE8FB5] to-[#FFBE7B]"
                         color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
                     >
-                        <Link href={"#portfolio"} className='capitalize bg-transparent flex-center gap-2'>View my work <MdKeyboardArrowRight /></Link>
+                        <ScrollLink href={"#portfolio"} className='capitalize bg-transparent flex-center gap-2'>View my work <MdKeyboardArrowRight /></ScrollLink>
                     </ShineBorder>
-                    <Link href={"#portfolio"} className='capitalize w-fit bg-white text-black hover:bg-black hover:text-white rounded-full px-4 py-3 flex-center gap-2'>Contact Me <MdKeyboardArrowRight /></Link>
+                    <ScrollLink href={"#contact"} className='capitalize w-fit bg-white text-black hover:bg-black hover:text-white rounded-full px-4 py-3 flex-center gap-2'>Contact Me <MdKeyboardArrowRight /></ScrollLink>
                 </div>
                 <SocialIcons />
             </div>
             <IconCloud iconSlugs={iconSlugs} />
-        </div>
+        </section>
     )
 }
 

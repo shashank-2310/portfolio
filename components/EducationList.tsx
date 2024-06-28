@@ -23,7 +23,7 @@ export default function EducationList() {
                 <div className="w-4/5 sm:w-3/4 text-center sm:text-left overflow-hidden relative h-full rounded-2xl p-3 sm:p-6 text-white bg-gradient-to-b from-[#00C9A7] to-black">
                     <h1 className="text-lg md:text-2xl font-semibold">Campus School</h1>
                     <p className="text-sm md:text-base">CBSE</p>
-                    <p className="text-sm md:text-base">Non-Medical</p>
+                    <p className="text-sm md:text-base">Class XII</p>
                     <p className="text-sm md:text-base">2020 - 2021</p>
                 </div>
             ),
@@ -35,7 +35,7 @@ export default function EducationList() {
                 <div className="w-4/5 sm:w-3/4 text-center sm:text-left overflow-hidden relative h-full rounded-2xl p-3 sm:p-6 text-white bg-gradient-to-b from-[#1E86FF] to-black">
                     <h1 className="text-lg md:text-2xl font-semibold">Campus School</h1>
                     <p className="text-sm md:text-base">CBSE</p>
-                    <p className="text-sm md:text-base">High School</p>
+                    <p className="text-sm md:text-base">Class X</p>
                     <p className="text-sm md:text-base">2017 - 2018</p>
                 </div>
             ),

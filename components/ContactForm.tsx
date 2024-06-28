@@ -38,7 +38,7 @@ export default function ContactForm() {
     }
 
     return (
-        <div className="w-full max-w-md mx-auto py-6 px-4 sm:px-6 lg:px-8 bg-white rounded-xl overflow-hidden">
+        <div className="w-full max-w-md mx-auto py-4 px-4 sm:px-6 lg:px-8 lg:py-6 bg-white rounded-xl overflow-hidden">
             <div className="space-y-4">
                 <div className="text-center">
                     <h2 className="text-xl sm:text-3xl font-bold text-[#2563eb]">Get in Touch</h2>

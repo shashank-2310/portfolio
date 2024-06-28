@@ -1,8 +1,8 @@
 import React from 'react'
+import ScrollLink from './ScrollLink'
 import Link from 'next/link'
 
-const links = [
-    { name: 'Home', href: '/' },
+export const links = [
     { name: 'About', href: '#about' },
     { name: 'Portfolio', href: '#portfolio' },
     { name: 'Contact', href: '#contact' }
@@ -12,9 +12,12 @@ const NavLinks = () => {
     return (
         <nav className="bg-transparent flex-col flex-center rounded-full">
             <ul className='flex-between gap-3 lg:gap-8 text-white py-2 px-1 lg:px-2'>
+                <li>
+                    <Link href={"/"} className='hover:text-blue-400'>Home</Link>
+                </li>
                 {links.map((link) => (
                     <li key={link.name}>
-                        <Link href={link.href} className='hover:text-blue-400'>{link.name}</Link>
+                        <ScrollLink href={link.href} className='hover:text-blue-400'>{link.name}</ScrollLink>
                     </li>
                 ))}
             </ul>

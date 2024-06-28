@@ -4,9 +4,9 @@ import Skills from './Skills'
 
 const About = () => {
     return (
-        <section className='size-full bg-black text-gray-300 flex flex-col gap-8 lg:gap-12 my-8' id='about'>
+        <section className='size-full bg-black text-gray-300 flex flex-col gap-6 sm:gap-8 lg:gap-12 my-8' id='about'>
             <h1 className="text-2xl sm:text-3xl lg:text-4xl text-center uppercase tracking-wider">About Me</h1>
-            <div className="flex-center lg:items-start flex-col-reverse lg:flex-row gap-12 w-full">
+            <div className="flex-center lg:items-start flex-col-reverse lg:flex-row gap-6 sm:gap-8 w-full">
                 <EducationList />
                 <div className="flex flex-col w-4/5">
                     <h2 className='md:text-xl text-base text-center sm:text-left w-full text-gray-400 font-medium mb-3 uppercase'>who am i?</h2>

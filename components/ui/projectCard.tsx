@@ -1,12 +1,14 @@
+import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import React from 'react'
+import { Chip } from '@nextui-org/react'
 
 type ProjectProps = {
   name: string,
   shortdescription: string,
   description: string,
   image: string,
+  skills: string[],
   github: string,
   live: string
 }
@@ -39,8 +41,13 @@ const ProjectCard = (item: ProjectProps) => {
           </div>
         </div>
       </div>
-      <div className="p-4 text-white bg-neutral-800/70 flex flex-col gap-2">
+      <div className="p-4 text-white bg-neutral-800/70 flex flex-col gap-2 rounded-b-xl">
         <div className="flex flex-col gap-1">
+          <div className="flex items-center flex-row flex-wrap gap-2 sm:gap-3 my-2">
+            {item.skills.map((skill) => (
+              <Chip key={skill} color="primary" variant='flat'>{skill}</Chip>
+            ))}
+          </div>
           <h2 className="text-lg font-bold">{item.name}</h2>
           <p className="text-base capitalize">{item.shortdescription}</p>
         </div>
