@@ -13,7 +13,7 @@ type OrbitProps = {
     delay: number;
 }
 
-function useScreenSize(): ScreenSize {
+export function useScreenSize(): ScreenSize {
     const [screenSize, setScreenSize] = useState<ScreenSize>({
         width: 0,
         height: 0,
@@ -173,7 +173,7 @@ export default function Skills() {
 
     return (
         <div className="relative flex h-[350px] sm:h-[500px] w-full max-w-[32rem] items-center justify-center overflow-hidden md:shadow-xl ">
-            <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-6xl sm:text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10">
+            <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b bg-clip-text text-center text-6xl sm:text-8xl font-semibold leading-none text-transparent from-white to-slate-900/10">
                 Skills
             </span>
 

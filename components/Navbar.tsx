@@ -3,6 +3,7 @@ import ShineBorder from './ui/shine-border'
 import NavLinks from './NavLinks'
 import Link from 'next/link'
 import { FaExternalLinkAlt } from 'react-icons/fa'
+import Image from 'next/image'
 
 
 const Navbar = () => {
@@ -12,7 +13,7 @@ const Navbar = () => {
                 href={"/"}
                 className='text-white font-medium text-base lg:text-xl hover:underline underline-offset-1 hidden sm:flex flex-row gap-2 items-center'
             >
-                Shashank
+                <Image src="/logo.png" width="50" height="50" alt='logo' className='scale-150 size-full' />
             </Link>
             <ShineBorder
                 className="text-center rounded-full mx-auto p-3 min-w-[300px] min-h-[60px]"
@@ -21,7 +22,7 @@ const Navbar = () => {
                 <NavLinks />
             </ShineBorder>
             <Link
-                href={"https://drive.google.com/file/d/11C_B_DHHeDBvL9CGw9K4PjLFrhVsn9m2/view"}
+                href={"https://drive.google.com/file/d/11VBDsAwcY50OAmIY4nxRPtUwammv4h66/view"}
                 target='_blank'
                 rel='noreferrer noopener'
                 className='text-white font-medium text-base lg:text-xl hover:underline underline-offset-1 hidden sm:flex flex-row gap-2 items-center'

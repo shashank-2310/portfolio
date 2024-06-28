@@ -5,7 +5,7 @@ import Skills from './Skills'
 const About = () => {
     return (
         <section className='size-full bg-black text-gray-300 flex flex-col gap-8 lg:gap-12 my-8' id='about'>
-            <h1 className="text-4xl text-center uppercase">About Me</h1>
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl text-center uppercase tracking-wider">About Me</h1>
             <div className="flex-center lg:items-start flex-col-reverse lg:flex-row gap-12 w-full">
                 <EducationList />
                 <div className="flex flex-col w-4/5">
@@ -23,8 +23,8 @@ const About = () => {
                     </div>
                 </div>
             </div>
-            <div className="size-full flex-center flex-col mt-20 sm:mt-24 lg:mt-4 sm:gap-4">
-                <h1 className='uppercase text-xl text-gray-300'>My Skills</h1>
+            <div className="size-full flex-center flex-col mt-8 sm:mt-16 lg:mt-4 sm:gap-4">
+                <h1 className='uppercase text-lg sm:text-xl text-gray-300 tracking-wider'>My Skills</h1>
                 <Skills />
             </div>
         </section>

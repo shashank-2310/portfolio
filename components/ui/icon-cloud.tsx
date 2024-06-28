@@ -9,6 +9,8 @@ import {
     renderSimpleIcon,
     SimpleIcon,
 } from "react-icon-cloud";
+import { useScreenSize } from "../Skills";
+
 
 export const cloudProps: Omit<ICloud, "children"> = {
     containerProps: {
@@ -73,6 +75,8 @@ type IconData = Awaited<ReturnType<typeof fetchSimpleIcons>>;
 export default function IconCloud({ iconSlugs }: DynamicCloudProps) {
     const [data, setData] = useState<IconData | null>(null);
     const { theme } = useTheme();
+    const { width } = useScreenSize();
+    const isDrag = width < 500 ? false : true;
 
     useEffect(() => {
         fetchSimpleIcons({ slugs: iconSlugs }).then(setData);
@@ -88,7 +92,7 @@ export default function IconCloud({ iconSlugs }: DynamicCloudProps) {
 
     return (
         // @ts-ignore
-        <Cloud {...cloudProps}>
+        <Cloud {...cloudProps} options={{ ...cloudProps.options, dragControl: isDrag }}>
             <>{renderedIcons}</>
         </Cloud>
     );
