@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState } from "react"
+import React from "react"
 import { z } from "zod"
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -20,7 +20,7 @@ export default function ContactForm() {
     const schema = z.object({
         name: z.string().min(2, "Name is required").regex(/^[a-zA-Z\s]+$/, "Name can only contain letters and spaces"),
         email: z.string().email("Please enter a valid email address"),
-        message: z.string().min(10, "Message must be at least 10 characters long"),
+        message: z.string().min(5, "Message must be at least 10 characters long"),
     })
 
     const {
