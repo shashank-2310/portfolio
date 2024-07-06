@@ -5,6 +5,11 @@ import SocialIcons from './SocialIcons'
 import WordRotate from './ui/word-rotate'
 import IconCloud from './ui/icon-cloud'
 import ScrollLink from './ScrollLink'
+import Link from 'next/link'
+import data from '../data/data.json';
+import { FaExternalLinkAlt } from 'react-icons/fa'
+
+const resumeLink = data.resumeLink
 
 const iconSlugs = [
     "typescript",
@@ -52,6 +57,14 @@ const Hero = () => {
                     <ScrollLink href={"#contact"} className='capitalize w-fit bg-white text-black hover:bg-black hover:text-white rounded-full px-4 py-3 flex-center gap-2'>Contact Me <MdKeyboardArrowRight /></ScrollLink>
                 </div>
                 <SocialIcons />
+                <Link
+                    href={resumeLink}
+                    target='_blank'
+                    rel='noreferrer noopener'
+                    className='text-white my-1 font-medium text-base lg:text-lg hover:underline underline-offset-1 sm:hidden flex flex-row gap-2 items-center'
+                >
+                    <FaExternalLinkAlt /> Resume
+                </Link>
             </div>
             <IconCloud iconSlugs={iconSlugs} />
         </section>

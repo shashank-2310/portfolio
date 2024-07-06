@@ -62,11 +62,6 @@ const SocialIcons = () => {
                     <Icons.linkedin className="h-6 w-6" />
                 </Link>
             </DockIcon>
-            <DockIcon className='sm:hidden '>
-                <Link className='flex-center' href={"https://drive.google.com/file/d/11VBDsAwcY50OAmIY4nxRPtUwammv4h66/view"} target='_blank' rel='noreferrer noopener'>
-                    <p className='size-6 tracking-wider font-bold text-base' >CV</p>
-                </Link>
-            </DockIcon>
         </Dock>
     )
 }

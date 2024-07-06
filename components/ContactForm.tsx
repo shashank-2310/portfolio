@@ -7,15 +7,15 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, useDisclosure } from "@nextui-org/react";
 import Link from "next/link";
 import { Icons } from "./SocialIcons";
+import { sendEmail } from "@/lib/sendemail";
+
+export type FormData = {
+    name: string;
+    email: string;
+    message: string;
+};
 
 export default function ContactForm() {
-
-    const [formData, setFormData] = useState({
-        name: "",
-        email: "",
-        message: "",
-    })
-    const { name, email, message } = formData
 
     const schema = z.object({
         name: z.string().min(2, "Name is required").regex(/^[a-zA-Z\s]+$/, "Name can only contain letters and spaces"),
@@ -27,14 +27,14 @@ export default function ContactForm() {
         handleSubmit,
         register,
         formState: { errors }
-    } = useForm({
+    } = useForm<FormData>({
         resolver: zodResolver(schema),
     })
 
     const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
-    const onSubmit = (data: any) => {
-        console.log(data)
+    const onSubmit = (data: FormData) => {
+        sendEmail(data);
     }
 
     return (
@@ -146,25 +146,5 @@ export default function ContactForm() {
                 </ModalContent>
             </Modal>
         </div>
-    )
-}
-
-function CircleCheckIcon(props: any) {
-    return (
-        <svg
-            {...props}
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-        >
-            <circle cx="12" cy="12" r="10" />
-            <path d="m9 12 2 2 4-4" />
-        </svg>
     )
 }

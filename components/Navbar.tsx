@@ -4,6 +4,9 @@ import NavLinks from './NavLinks'
 import Link from 'next/link'
 import { FaExternalLinkAlt } from 'react-icons/fa'
 import Image from 'next/image'
+import data from '../data/data.json';
+
+const resumeLink = data.resumeLink
 
 
 const Navbar = () => {
@@ -22,7 +25,7 @@ const Navbar = () => {
                 <NavLinks />
             </ShineBorder>
             <Link
-                href={"https://drive.google.com/file/d/11VBDsAwcY50OAmIY4nxRPtUwammv4h66/view"}
+                href={resumeLink}
                 target='_blank'
                 rel='noreferrer noopener'
                 className='text-white font-medium text-base lg:text-lg hover:underline underline-offset-1 hidden sm:flex flex-row gap-2 items-center'
