@@ -10,8 +10,8 @@ export const links = [
 
 const NavLinks = () => {
     return (
-        <nav className="bg-transparent flex-col flex-center rounded-full">
-            <ul className='flex-between gap-3 lg:gap-8 text-white py-2 px-1 lg:px-2'>
+        <nav className="bg-transparent flex-center rounded-full">
+            <ul className='flex-between flex-row gap-3 lg:gap-8 text-white py-2 px-1 lg:px-2'>
                 <li>
                     <Link href={"/"} className='hover:text-blue-400'>Home</Link>
                 </li>

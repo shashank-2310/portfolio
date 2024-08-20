@@ -3,8 +3,8 @@
         {
             "name": "NamasteUI",
             "shortdescription": "An innovative UI library",
-            "description": "A sleek component library built on Next.js, Tailwind CSS, and TypeScript. Elevate your web projects with responsive navbar, grid, carousel, etc. more designed for seamless integration and enhanced user experiences.",
-            "image": "/soon.jpg",
+            "description": "A sleek component library crafted with Next.js, Tailwind CSS, and TypeScript. Elevate your web projects with responsive, reusable UI components designed for seamless integration and superior user experiences.",
+            "image": "/namasteui.png",
             "skills": [
                 "Next.js",
                 "Tailwind CSS",

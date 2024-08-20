@@ -2,6 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Chip } from '@nextui-org/react'
+import { Tooltip } from "@nextui-org/tooltip";
 
 type ProjectProps = {
   name: string,
@@ -18,28 +19,6 @@ const ProjectCard = (item: ProjectProps) => {
     <div className="rounded-xl overflow-hidden shadow-lg transition-transform duration-300 ease-in-out hover:-translate-y-2 hover:shadow-2xl hover:shadow-black/25 hover:scale-105">
       <div className="relative">
         <Image src={item.image} alt={item.name} width={500} height={300} className="w-full h-full object-cover" />
-        <div className="absolute top-1 right-1 p-1 rounded-full cursor-pointer">
-          <div className="flex items-center gap-2 text-lg hover:scale-105 bg-gray-900/50 hover:bg-black/15 px-2 py-1 rounded-full text-foreground">
-            <Link
-              href={item.github}
-              className="block text-gray-700  hover:text-blue-700"
-              target='_blank'
-              rel='noreferrer noopener'
-            >
-              <CodeIcon />
-              <span className="sr-only">View Code</span>
-            </Link>
-            <Link
-              href={item.live}
-              className="block text-gray-700 hover:text-blue-700"
-              target='_blank'
-              rel='noreferrer noopener'
-            >
-              <EyeIcon />
-              <span className="sr-only">View Project</span>
-            </Link>
-          </div>
-        </div>
       </div>
       <div className="p-4 text-white bg-neutral-800/70 flex flex-col gap-2 rounded-b-xl">
         <div className="flex flex-col gap-1">
@@ -48,7 +27,31 @@ const ProjectCard = (item: ProjectProps) => {
               <Chip key={skill} color="primary" variant='flat'>{skill}</Chip>
             ))}
           </div>
-          <h2 className="text-lg font-bold">{item.name}</h2>
+          <div className="flex flex-row justify-between items-center w-full">
+            <h2 className="text-lg font-bold">{item.name}</h2>
+            <div className="flex items-center gap-2 text-lg px-3 py-2">
+              <Tooltip showArrow={true} color='primary' placement='top-end' content="View Code">
+                <Link
+                  href={item.github}
+                  className="block text-default-300 hover:text-primary"
+                  target='_blank'
+                  rel='noreferrer noopener'
+                >
+                  <CodeIcon />
+                </Link>
+              </Tooltip>
+              <Tooltip showArrow={true} color='primary' placement='top-end' content="View Project">
+                <Link
+                  href={item.live}
+                  className="block text-default-300 hover:text-primary"
+                  target='_blank'
+                  rel='noreferrer noopener'
+                >
+                  <EyeIcon />
+                </Link>
+              </Tooltip>
+            </div>
+          </div>
           <p className="text-base capitalize">{item.shortdescription}</p>
         </div>
         <p className="text-sm">
