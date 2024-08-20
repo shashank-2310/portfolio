@@ -24,7 +24,7 @@ export default function EducationList() {
                     <h1 className="text-lg md:text-2xl font-semibold">Campus School</h1>
                     <p className="text-sm md:text-base">CBSE</p>
                     <p className="text-sm md:text-base">Class XII</p>
-                    <p className="text-sm md:text-base">2020 - 2021</p>
+                    <p className="text-sm md:text-base">2019 - 2020</p>
                 </div>
             ),
         },
